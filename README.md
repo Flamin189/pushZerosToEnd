@@ -1,7 +1,19 @@
 # pushZerosToEnd
 
-01.A chocolate factory is packing chocolates into the packets.The chocolate packets here represent an array of 
-N Number of integer values.The task is to find the empty packets(0) of chocolate and push it to the end of 
-the conveyor belt(Array).
 
-Ex : N = 8 and arr = [4,5,0,1,9,0,5,0]
+let k = 0;
+let arr = [4, 5, 0, 1, 9, 0, 5, 0];
+
+ for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      arr[k] = arr[i];
+      k++;
+    }
+  }
+
+ while (k < arr.length) {
+    arr[k] = 0;
+    k++;
+  }
+}
+console.log(arr);
